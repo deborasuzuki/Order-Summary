@@ -120,7 +120,7 @@ main section .cancel:hover {
   font-size: 11px;
   text-align: center;
   position: relative;
-  top: 700px;
+  top: 750px;
   left: 50%;
   transform: translateX(-50%);
 }
