@@ -10,7 +10,6 @@ $title-color: hsl(223, 47%, 23%);
 
 body {
   margin: 0;
-  width: 1440px;
 
   background-color: $background-color;
   background-image: url(/images/pattern-background-desktop.svg);
@@ -21,26 +20,42 @@ body {
 }
 
 main {
-  width: 450px;
-  height: 660px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   background-color: #fff;
   border-radius: 20px;
 
-  header {
+  width: 90vw;
+  margin: 5vw;
+
+  @media (min-width: 769px) {
     width: 450px;
-    height: 220px;
+    height: 660px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  header {
     background-image: url(/images/illustration-hero.svg);
+    background-size: cover;
     border-radius: 20px 20px 0 0;
+
+    width: 100%;
+    height: 220px;
+
+    @media (min-width: 769px) {
+      width: 450px;
+    }
   }
 
   section {
-    width: 450px;
-    height: 440px;
+    width: 100%;
+    height: 400px;
+
+    @media (min-width: 769px) {
+      width: 450px;
+      height: 440px;
+    }
 
     h1 {
       margin: 40px 0 20px 0;
@@ -63,7 +78,7 @@ main {
 
     .card {
       margin: 20px auto;
-      width: 350px;
+      width: 100%;
       height: 90px;
 
       background-color: $card-color;
@@ -73,6 +88,10 @@ main {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+
+      @media (min-width: 769px) {
+        width: 450px;
+      }
 
       img {
         width: 45px;
@@ -111,8 +130,8 @@ main {
     }
 
     button {
-      margin: 20px 50px;
-      width: 350px;
+      margin: 20px 34px;
+      width: 80%;
       height: 45px;
 
       border: none;
@@ -126,6 +145,11 @@ main {
 
       box-shadow: 0px 8px 10px $background-color;
 
+      @media (min-width: 769px) {
+        margin: 20px 50px;
+        width: 350px;
+      }
+
       &:hover {
         cursor: pointer;
         background-color: #776bff;
@@ -133,7 +157,7 @@ main {
     }
 
     .cancel {
-      width: 450px;
+      width: 100%;
       position: relative;
       left: 40%;
 
@@ -141,6 +165,10 @@ main {
       font-size: 14px;
       font-weight: 700;
       color: $text-color;
+
+      @media (min-width: 769px) {
+        width: 450px;
+      }
 
       &:hover {
         color: $title-color;
@@ -150,10 +178,14 @@ main {
 }
 
 .attribution {
+  @media (min-width: 769px) {
+    top: 750px;
+  }
+
   font-size: 11px;
   text-align: center;
   position: relative;
-  top: 750px;
+
   left: 50%;
   transform: translateX(-50%);
 
